@@ -48,4 +48,17 @@
               onPanResponderRelease: this._handlePanResponderEnd,
               onPanResponderTerminate: this._handlePanResponderEnd
             });
+
+            _handleStartShouldSetPanResponder: function(e: Object, gestureState: Object): boolean {
+              return true;
+            },
+            _handleMoveShouldSetPanResponder: function(e: Object, gestureState: Object): boolean {
+              return true;
+            },
+            _handlePanResponderGrant: function(e: Object, gestureState: Object) {
+            },
+            _handlePanResponderMove: function(e: Object, gestureState: Object) {
+            },
+            _handlePanResponderEnd: function(e: Object, gestureState: Object) {
+            },
             """
