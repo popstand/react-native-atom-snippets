@@ -19,7 +19,7 @@
 
 '.source.js':
   'React network call stub':
-    'prefix': 'fe'
+    'prefix': 'fetch'
     'body': """fetch(\'\')
         .then((response) => response.json())
         .then((responseJSON) => {
@@ -75,9 +75,9 @@
               ListView,
             } from 'react-native';
 
-            import LocalStorage from '../../Constants/LocalStorage'
+            import Something from '../../Somewhere'
 
-            export default class CurrencySettings extends Component {
+            export default class ClassName extends Component {
 
               constructor(props) {
                 super(props);
@@ -97,4 +97,37 @@
                 );
               }
             }
+            """
+
+  'Image (React)':
+    'prefix': 'image'
+    'body': """
+            <Image
+              style={{width: 20, height: 20}}
+              source={{uri: 'https://i.imgur.com/7JIaRGA.png'}}
+            />
+            """
+
+  'Text (React)':
+    'prefix': 'text'
+    'body': """
+            <Text style={styles.someStyle}>
+              {someVar}
+            </Text>
+            """
+
+  'View (React)':
+    'prefix': 'view'
+    'body': """
+            <View style={styles.someStyle}>
+              {someVar}
+            </View>
+            """
+  'WebView (React)':
+    'prefix': 'webview'
+    'body': """
+            <WebView style={styles.webview}
+                    source={require('./www/amcharts-example.html')}
+                    injectedJavaScript={'alert("hello friend")'}
+                  />
             """
