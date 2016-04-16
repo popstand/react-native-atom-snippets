@@ -131,3 +131,9 @@
                     injectedJavaScript={'alert("hello friend")'}
                   />
             """
+  'TouchableHighlight (React)':
+    'prefix': 'touchable'
+    'body': """
+            <TouchableHighlight onPress={this.onPress}>
+            </TouchableHighlight>
+            """
