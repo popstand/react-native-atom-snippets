@@ -74,9 +74,10 @@
               View,
               ListView,
             } from 'react-native';
-
+            /*
             import Something from '../../Somewhere'
-
+            import styles from './styles';
+            */
             export default class ClassName extends Component {
 
               constructor(props) {
@@ -136,4 +137,27 @@
     'body': """
             <TouchableHighlight onPress={this.onPress}>
             </TouchableHighlight>
+            """
+
+  'StyleSheet Stub (React)':
+    'prefix': 'stylesheet'
+    'body': """
+            'use strict';
+
+            import React, {
+              StyleSheet
+            } from 'react-native';
+
+            import Dimensions from 'Dimensions';
+            let windowSize = Dimensions.get('window');
+
+            const styles = StyleSheet.create({
+              container: {
+
+                backgroundColor: '#000000',
+              },
+            });
+
+            export default styles
+
             """
